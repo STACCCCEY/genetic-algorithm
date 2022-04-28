@@ -54,29 +54,6 @@ def main():
             print(i * 2 + 1100)
 
 
-    # 绘图
-    plt.figure(500)
-    # x_col = np.linspace(0,len(data[0,:]),len(data[0,:]))
-    x_col = np.linspace(1100, 2498, len(data[0, :]))  # 返回介于start和stop之间均匀间隔的num个数据的一维矩阵
-    Ga = [1112, 1120, 1136, 1140, 1270, 1272, 1288, 1292, 1314, 1338, 1376, 2300, 2302, 2304, 2306, 2312, 2418, 2462,
-          2474]
-    Ga = np.array(Ga)
-    y_col = np.transpose(data[0, :])  # 数组逆序
-    plt.plot(x_col, y_col)
-
-    for i in range(len(Ga)):
-        Ga[i] = (Ga[i] - 1100) / 2
-
-    plt.scatter(x_col[Ga], y_col[Ga], marker='s', color='r')
-    plt.legend(['First calibration object', 'Selected variables'])
-    plt.xlabel('Variable index')
-    plt.xlabel("Wavenumber(nm)")
-    plt.ylabel("Absorbance")
-    plt.title("Genetic feature selecting ", fontweight="semibold", fontsize='x-large')
-    plt.legend(['First calibration object', 'Selected variables'])
-    plt.xlabel('Variable index')
-    plt.grid(True)
-    plt.show()
 
 
 if __name__ == '__main__':
